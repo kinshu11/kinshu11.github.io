@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novelnexus</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .box1{
+            height: 350px;
+            width: 250px;
+            background-color: #c3af97;
+            
+            margin: 50px;
+            float: left;
+            border-radius: 10%;
+        }
+        .box2{
+            height: 350px;
+            width: 250px;
+            background-color: #c3af97;
+            margin: 50px;
+            float: left;
+            border-radius: 10%;
+        }
+        .box3{
+            height: 350px;
+            width: 250px;
+            background-color: #c3af97;
+           
+            margin: 50px;
+            float: left;
+            border-radius: 10%;
+        }
+        body {
+            background-color: #a67b5b;
+        }
+
+        .header {
+            background-color: #c3af97;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding:  20px 20px;
+            justify-content: space-between ;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0b0211;
+            text-decoration: none;
+            
+        }
+
+       
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links div {
+            margin-left: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            color: #0b0211;
+
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+            color: #0b0211;
+            
+        }
+
+        .cart img {
+            width: 30px;
+            margin-right: 5px;
+        }
+        .search-bar {
+         flex: 1;
+        max-width: 90%;
+        display: flex;
+        margin: 100px 100px;
+        }
+        .search-bar2 {
+         flex: 1;
+        max-width: 90%;
+        display: flex;
+        margin: 10px 10px;
+        }
+        .search-bar2 input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        font-size: 16px;
+        border-radius: 20px 0 0 20px;
+        }
+
+        .search-bar2 button {
+        background-color: #c3af97;
+        border: 40%;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 0px 20px 20px 0;
+        }
+
+
+        .search-bar input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        font-size: 16px;
+        border-radius: 20px 0 0 20px;
+        }
+
+        .search-bar button {
+        background-color: #c3af97;
+        border: 40%;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 0px 20px 20px 0;
+        }
+    
+  
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown button {
+            background-color: #a67b5b;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown button:hover {
+            background-color: #9e710f;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-section {
+            margin: 10px;
+        }
+
+        .footer a {
+            color: #f2a900;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+         
+    </style>
+    <link rel="stylesheet" href="searchbar.html">
+</head>
+<body>
+    
+
+<header class="header">
+    <a href="#" class="logo">Novelnexus <br> <p style="font-size:small; font-family: Arial, Helvetica, sans-serif; font-variant: small-caps; font-style: italic;">books store </p></a>
+
+   
+
+    <div class="nav-links">
+        <div style="color: #9e710f;"><strong> <a href=" aboutus.html">About us</a></strong></div>
+        <div >
+            <a href="signin.html"> Sign in </a></div>
+        <div><strong> Orders</strong></div>
+
+        <div class="cart">
+            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart">
+            <strong>Cart</strong>
+            <div class="box-sizing">
+               <div class="search-bar2 "> 
+                <div class="search-bar2" >
+                    <input type="text" placeholder="Search Author....">
+                    <button>🔍</button>
+                </div>
+        </div>
+    </div>
+ 
+    
+</header>
+<div class="search-bar" >
+    <input type="text" placeholder="Search Books ....">
+    <button>🔍</button>
+</div>
+<h1 style="margin-top: -230px; font-style: italic; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><center>
+    Novelnexus
+    <p style="font-size:small; font-family: Arial, Helvetica, sans-serif; font-variant: small-caps;"> books store </p>
+    </center>
+ </h1>
+
+
+
+<div style="margin-top: 100px; margin-left: 8.5%;" > <center>
+    <div class="box1" >
+        <h2 ><center>Career </center></h2>
+        <center> <img src="./career .jpg" width="100px" height="" ></center>
+      
+    
+        <div class="dropdown" style="margin-top: 20px;">
+
+           
+
+            <button>Simon sinek</button>
+            <div class="dropdown-content">
+                <a href="https://amzn.in/d/aETZyOc">Find your way</a>
+                <a href="https://amzn.in/d/8uTECkG">Leaders eat last</a>
+                <a href="https://amzn.in/d/e1SLV6L">The infinite game</a>
+            </div>
+        </div>
+       
+        <div class="dropdown" style="margin-top: 20px;">
+            <button>Tushaba shinde IRPS</button>
+            <div class="dropdown-content">
+                <a href="https://amzn.in/d/efpO3m3">How to choose a succesful career?</a>
+                
+            </div>
+        </div>
+        <div class="dropdown" style="margin-top: 20px;">
+            <button>Brianna wiest</button>
+            <div class="dropdown-content">
+                <a href="https://amzn.in/d/c81IZm6">The mountain is you:Transforming self-sabotag into self-mastery</a>
+                <a href="https://amzn.in/d/1Vevmq0">I am the hero of my own life</a>
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="box2">
+        <h2><center>Travel</center></h2>
+        <img src="./travel.jpg" width="100px"><br/>
+
+
+        <div class="dropdown" style="margin-top: 20px;">
+            <button>Bill bryson</button>
+            <div class="dropdown-content">
+                <a href="https://amzn.in/d/93eYtnF">Neither Here nor There: Travels in Europe</a>
+                <a href="https://amzn.in/d/inV9oyF">A Short History of Nearly Everything</a>
+            </div>
+        </div><Br>
+        <div class="dropdown" style="margin-top: 20px;">
+            <button>Rolf potts</button>
+            <div class="dropdown-content">
+                <a href="https://amzn.in/d/93eYtnF">Vagabonding</a>
+                <a href="https://amzn.in/d/bUhOj3X">Forever Nomad: The Ultimate Guide to World Travel, From a Weekend to a Lifetime</a>
+            </div>
+        </div><br>
+
+        <div class="dropdown" style="margin-top: 20px;">
+            <button>John steinbeck</button>
+            <div class="dropdown-content">
+                <a href="https://amzn.in/d/1bvxw1G">Travels with Charley: In Search of America</a>
+                <a href="https://amzn.in/d/3AIyAVH">The wayward bus</a>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="box3">
+        <h2><center>Health</center></h2>
+        <center><img src="./WhatsApp Image 2025-02-13 at 21.23.08_07115b2d.jpg" width="100px"></center>
+        <div class="dropdown" style="margin-top: 20px;">
+            <button>Mukesh Bansal</button>
+           
+            <div class="dropdown-content">
+                <a href="https://amzn.in/d/hFZQAk1">Hacking Health</a>
+                <a href="https://amzn.in/d/hFZQAk1">The handmade life</a>
+            </div>
+        </div>
+        <div class="dropdown" style="margin-top: 20px;">
+            <button>Raj Ganpath</button>
+            <div class="dropdown-content">
+               
+                <a href="https://www.amazon.in/Simple-Not-Easy-No-Nonsense-Nutrition/dp/9360453722">Simple, Not Easy: A No-Nonsense Guide to Fitness, Nutrition and Weight Loss</a>
+            </div>
+        </div>
+        <div class="dropdown" style="margin-top: 20px;">
+            <button>Mark Rippetoe</button>
+            <div class="dropdown-content">
+               
+                <a href="https://amzn.in/d/0YMbpuq">Starting Strength</a>
+            </div>
+        </div>
+
+
+        
+        
+    </div></center>
+</div>
+
+
+  <div class="card-group">
+    <div class="card">
+      <img src="./La leadership è un modo di pensare _ Simon Sinek - Improove (1).jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Simon Sinek</h5>
+        <p class="card-text">Simon Oliver Sinek (born 1973) is an English-born American author and inspirational speaker on business leadership. His books include Start with Why (2009) and The Infinite Game (2019).</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./Rolf Potts on Travel Blogging.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Rolf Potts</h5>
+        <p class="card-text">Rolf Potts (born October 13, 1970) is an American travel writer, essayist, podcaster, and author. He has written five books, including Vagabonding (Random House, 2003), Marco Polo Didn't Go There (Travelers Tales, 2008), Souvenir (Bloomsbury, 2018), and The Vagabond's Way (Ballantine, 2022).</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./Wramplingham.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bill bryson</h5>
+        <p class="card-text">William McGuire Bryson ( born 8 December 1951) is an American-British journalist and author. Bryson has written a number of nonfiction books on topics including travel, the English language, and science. </p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+
+
+
+        
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We provide the best services to our customers. Learn more <a href="aboutus.html">here</a>.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="work.html">Home</p>
+            </div>
+            <div class="footer-section">
+                <h3>Social Media</h3>
+                <p><a href="https://www.facebook.com/">Facebook</a> | <a href="https://x.com/i/flow/single_sign_on">Twitter</a> | <a href="https://www.bing.com/search?q=instagram&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=instagram&sc=17-9&sk=&cvid=F2DDA994679F450E9FAC01AF8F5C8A08&ghsh=0&ghacc=0&ghpl=">Instagram</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123456789</p>
+            </div>
+        </div>
+        <p>&copy; 2025 YourWebsite. All rights reserved.</p>
+
+    </footer>
+
+
+
+
+</body>
+</html>

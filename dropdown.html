@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="dropdown">Choose an option:</label>
+    <select id="dropdown" onchange="navigateToLink(this)">
+        <option value="">Select an option</option>
+        <option value="https://amzn.in/d/hUc2f7R">Find your way</option>
+        <option value="https://www.bing.com">Bing</option>
+        <option value="https://www.yahoo.com">Yahoo</option>
+    </select>
+    
+    <script>
+        function navigateToLink(select) {
+            let url = select.value;
+            if (url) {
+                window.location.href = url; // Redirect to selected URL
+            }
+        }
+    </script>
+    
+
+</body>
+</html>
